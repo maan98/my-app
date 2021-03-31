@@ -9,7 +9,7 @@ pipeline {
         }
          stage('Test') {
             steps {
-                sh 'mvn --version'
+                sh 'mvn --versio'
             }
         }
         stage("Maven Build") {
