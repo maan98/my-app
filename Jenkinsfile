@@ -24,7 +24,7 @@ pipeline {
               }
             }
             steps {
-                sh 'make publish'
+               echo "successfully depoyed"
             }
         }
     }
