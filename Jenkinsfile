@@ -20,7 +20,7 @@ pipeline {
         stage('Deploy') {
             when {
               expression {
-                currentBuild.result == null || currentBuild.result == 'ERROR' 
+                currentBuild.result == 'FAILED' 
               }
             }
             steps {
