@@ -12,6 +12,12 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+         stage('Test sonar code quality') {
+            steps {
+                no public field ‘webhookSecretId’ (or getter method) found in class org.sonarsource.scanner.jenkins.pipeline.WaitForQualityGateStep
+                sh 'mvn sonar:sonar'
+            }
+        }
         stage("Maven Build") {
             steps {
                 sh 'mvn clean install -f my-app/pom.xml'
