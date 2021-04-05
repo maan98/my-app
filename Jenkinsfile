@@ -19,7 +19,7 @@ pipeline {
         }
          stage('Test sonar code quality') {
             steps {
-               sh 'mvn sonar:sonar'
+               sh 'mvn sonar -f my-app/pom.xml'
             }
         }
         stage('Deploy') {
