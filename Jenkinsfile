@@ -17,11 +17,6 @@ pipeline {
                 sh 'mvn clean install -f my-app/pom.xml'
             }
         }
-         stage('Test sonar code quality') {
-            steps {
-               sh 'mvn sonar -f my-app/pom.xml'
-            }
-        }
         stage('Deploy') {
             when {
               expression {
